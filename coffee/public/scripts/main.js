@@ -27,8 +27,8 @@
 
   formHandler.addInputHandler(Validation.isCompanyEmail);
 
-  dpd.coffeeorders.get(function(results, error){
-    results.forEach(function(element){
+  dpd.coffeeorders.get(function(results, error) {
+    results.forEach(function(element) {
       console.log(element);
       checkList.addRow(element);
     });

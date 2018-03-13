@@ -16,8 +16,10 @@
     console.log("Delivering order for " + customerId);
     this.db.remove(customerId);
     //remove from dpd as well... might need to .get for the id first
-    dpd.coffeeorders.get({emailAddress: customerId}, function(results,error){
-      results.forEach(function(element){
+    dpd.coffeeorders.get({
+      emailAddress: customerId
+    }, function(results, error) {
+      results.forEach(function(element) {
         console.log(element);
         //var array = results[3];
         //dpd.coffeeorders.del({id: array})
